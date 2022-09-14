@@ -42,7 +42,7 @@
   let cursors = [];
   let page = writable(0);
   let currentPage = 0;
-
+  
   const blogs = query(GET_BLOGS, {
     variables: {
       limit: 2,
@@ -57,6 +57,7 @@
     if (pointer !== cursors[page]) {
       cursors = [...cursors, pointer];
     }
+    console.log(cursors, page);
   };
 </script>
 
